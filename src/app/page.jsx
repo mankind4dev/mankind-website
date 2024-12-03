@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <div className="text-red-300">Home Page</div>
-      <Button gradientDuoTone="purpleToBlue" pill outline>ljukfl,'</Button>
+      <Button gradientDuoTone="purpleToBlue" pill outline>Adebanke</Button>
     </>
   );
 };
