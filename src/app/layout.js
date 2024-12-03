@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import ThemeCompo from "./components/ThemeCompo";
 import { ThemeProvider } from "next-themes";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,17 +23,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider>
-          <ThemeCompo>
-            <Header />
-            {children}
-          </ThemeCompo>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <head>
+          
+        </head>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <ThemeProvider>
+            <ThemeCompo>
+              <Header />
+              {children}
+            </ThemeCompo>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

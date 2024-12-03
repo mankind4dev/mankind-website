@@ -5,7 +5,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-// import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { dark, light } from "@clerk/themes";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -72,7 +72,7 @@ export default function Header() {
         >
           {theme === "light" ? <FaSun /> : <FaMoon />}
         </Button>
-        {/* <SignedIn>
+        <SignedIn>
           <UserButton
             appearance={{
               baseTheme: theme === "light" ? light : dark,
@@ -86,7 +86,7 @@ export default function Header() {
               Sign In
             </Button>
           </Link>
-        </SignedOut> */}
+        </SignedOut>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
