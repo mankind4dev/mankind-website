@@ -10,9 +10,7 @@ export const connect = async () =>{
     }
     try {
         await mongoose.connect(process.env.MONGODB_URL, {
-           dbName: "mankind4dev-website",
-           useNewUrlParser: true,
-           useUnifiedTopology: true,
+           dbName: "mankind4dev-website", 
         })
         console.log("Connected to the MongoDB")
         initialized = true
