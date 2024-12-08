@@ -5,7 +5,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  apiKey: process.env.NEXTJS_PUBLIC_FIREBASE_API_KEYS,
   authDomain: "mankind-web-app.firebaseapp.com",
   projectId: "mankind-web-app",
   storageBucket: "mankind-web-app.appspot.com",
